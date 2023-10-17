@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -37,13 +37,41 @@ const NavBarComp = () => {
       }
     );
   }, []);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  useEffect(() => {
+    const updatePosition = () => {
+      setScrollPosition(window.pageYOffset);
+    };
+
+    window.addEventListener("scroll", updatePosition);
+
+    updatePosition();
+
+    return () => window.removeEventListener("scroll", updatePosition);
+  }, []);
+
+  useEffect(() => {
+    console.log(scrollPosition);
+    const t2 = gsap.timeline();
+    t2.to(".navBar-comp", {
+      background: `${scrollPosition > 80 ? "#010409" : "bg-transparent"}`,
+      duration: 0.5,
+    });
+  }, [scrollPosition]);
 
   return (
     <Navbar
       expand="lg"
       fixed="top"
       variant="dark"
-      className="bg-transparent z-50">
+      className={`${scrollPosition > 80 ? "bg-[#010409]" : "bg-transparent"}`}
+      // style={{
+      //   background: `${
+      //     scrollPosition > 80 ? "bg-[#0054FF]" : "bg-transparent"
+      //   }`,
+      //   transition: "250ms easeIn",
+      // }}>
+    >
       <Container>
         <Navbar.Brand href="#home">
           <img src={logo} className="nav-logo" alt="" />
