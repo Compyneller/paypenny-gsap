@@ -30,10 +30,9 @@ const Benefits2 = () => {
         direction="vertical"
         slidesPerView={2.5}
         spaceBetween={20}
-        mousewheel={true}
         autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
+          delay: 3000,
+          disableOnInteraction: true,
         }}
         modules={[Mousewheel, Autoplay]}
         effect="fade">

@@ -8,11 +8,11 @@ import Refer from "../components/Refer";
 import AppSloutley from "../components/AppSloutley";
 import Benefits2 from "../components/Benefits2";
 import LoadingPage from "../components/LoadingPage";
+import NavBarComp from "../components/NavBarComp";
 
 const Home = () => {
   return (
     <>
-      {/* <LoadingPage /> */}
       <Hero />
       <SendMoney />
       <Benifits />

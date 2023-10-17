@@ -62,11 +62,11 @@ const App = () => {
       {loading ? (
         <LoadingPage />
       ) : (
-        <div className="mainContainer">
+        <>
           <NavBarComp />
           <Home />
           <Footer />
-        </div>
+        </>
       )}
     </>
   );

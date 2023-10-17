@@ -4,10 +4,8 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../assets/Logo.png";
 import gsap from "gsap";
-import { Expo } from "gsap";
 import { Power3 } from "gsap";
 const NavBarComp = () => {
-  const navRef = useRef(null);
   useEffect(() => {
     const tl = gsap.timeline({
       onComplete: () => {},
@@ -50,21 +48,14 @@ const NavBarComp = () => {
     return () => window.removeEventListener("scroll", updatePosition);
   }, []);
 
-  useEffect(() => {
-    console.log(scrollPosition);
-    const t2 = gsap.timeline();
-    t2.to(".navBar-comp", {
-      background: `${scrollPosition > 80 ? "#010409" : "bg-transparent"}`,
-      duration: 0.5,
-    });
-  }, [scrollPosition]);
-
   return (
     <Navbar
       expand="lg"
       fixed="top"
       variant="dark"
-      className={`${scrollPosition > 80 ? "bg-[#010409]" : "bg-transparent"}`}
+      className={`w-full ${
+        scrollPosition > 80 ? "bg-[#010409]" : "bg-transparent"
+      }`}
       // style={{
       //   background: `${
       //     scrollPosition > 80 ? "bg-[#0054FF]" : "bg-transparent"

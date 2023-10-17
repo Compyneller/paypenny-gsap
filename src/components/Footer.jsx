@@ -6,7 +6,7 @@ import insta from "../assets/Group (1).png";
 import linkedin from "../assets/Group (2).png";
 const Footer = () => {
   return (
-    <footer className="pt-28 pb-20">
+    <footer className="pt-28 pb-20 overflow-hidden">
       <Container>
         <Row className="g-5">
           <Col xs={12} sm={12} md={6} lg={3}>
