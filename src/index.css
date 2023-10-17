@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+#app {
+  height: 100%;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.active-slide {
+  background: red;
+}
+body {
+  cursor: url("./assets/Untitled.png"), auto;
+  font-family: "Gilroy" !important;
+}
+.custom-btn {
+  display: flex;
+  align-items: center;
+  padding: 32px 52px;
+  border: 1px solid #ffffff;
+
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+
+  color: white;
+  z-index: 1;
+}
+
+.custom-btn:hover svg {
+  fill: #000000;
+}
+
+.custom-btn:hover svg path {
+  fill: #000000;
+}
+
+.custom-btn:hover svg plygon {
+  fill: #000000;
+}
+
+.custom-btn:hover svg circle {
+  fill: #000000;
+}
+
+.custom-btn:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.custom-btn:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #39bda7;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.custom-btn:hover {
+  color: #000000;
+  border: 1px solid #ffffff;
+}
+
+.custom-btn:hover:before {
+  top: -35%;
+  background-color: #ffffff;
+  color: black;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.custom-btn:hover:after {
+  top: -45%;
+  background-color: #ffffff;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.hero-cst-rotate {
+  animation: rotate 20s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.cst-linear-gradient {
+  background: linear-gradient(152deg, #0054ff 22.32%, #00a3ff 97.4%);
+}
