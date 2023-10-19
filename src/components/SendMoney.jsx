@@ -82,7 +82,7 @@ const SendMoney = () => {
   }, []);
 
   return (
-    <div className="py-20 relative overflow-hidden" ref={root}>
+    <div className="py-20 relative overflow-hidden send-money" ref={root}>
       <Container>
         <div className="flex flex-col gap-[20px] mb-20" id="box1">
           <div className="w-full 2xl:w-[707px] text-center mx-auto ">

@@ -125,7 +125,7 @@ const Benifits = () => {
   }, []);
 
   return (
-    <div className="w-full py-20 rounded-[60px] flex items-center justify-center overflow-hidden bg-[#010409]">
+    <div className="w-full py-20 rounded-[60px] flex items-center justify-center overflow-hidden bg-[#010409] benefits">
       <Container>
         <div className="w-full 2xl:w-[1240px] text-center mx-auto mb-[70px]">
           <h1

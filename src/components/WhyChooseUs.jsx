@@ -52,7 +52,7 @@ const WhyChooseUs = () => {
   }, []);
 
   return (
-    <div className="py-20 overflow-hidden">
+    <div className="py-20 overflow-hidden why-choose-us">
       <Container>
         <h1
           className="text-[55px] lg:text-[106px] font-semibold tracking-[-2.65px] text-center capitalize mb-[70px]"

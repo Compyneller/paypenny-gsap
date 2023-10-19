@@ -3,13 +3,27 @@ import { useState } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home";
 import "./font/style.css";
+// import "./Loco.css";
 import NavBarComp from "./components/NavBarComp";
 import Footer from "./components/Footer";
 import gsap, { Power3 } from "gsap";
 import LoadingPage from "./components/LoadingPage";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 const App = () => {
   const [counter, setCounter] = useState(0);
   const [loading, setLoading] = useState(true);
+
+  // useEffect(() => {
+  //   const locoScroll = new LocomotiveScroll({
+  //     el: document.querySelector(".smooth-scroll"),
+  //     smooth: true,
+  //   });
+  //   // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+  //   locoScroll.on("scroll", ScrollTrigger.update);
+  // }, []);
+
   const reveal = () => {
     // window.alert("reveal");
     const tl = gsap.timeline({
@@ -62,11 +76,11 @@ const App = () => {
       {loading ? (
         <LoadingPage />
       ) : (
-        <>
+        <div className="smooth-scroll">
           <NavBarComp />
           <Home />
           <Footer />
-        </>
+        </div>
       )}
     </>
   );

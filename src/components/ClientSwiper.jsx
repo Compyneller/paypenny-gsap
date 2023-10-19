@@ -107,6 +107,7 @@ const ClientSwiper = () => {
       grabCursor={true}
       pagination={{
         clickable: true,
+        dynamicBullets: true,
       }}
       breakpoints={{
         0: {

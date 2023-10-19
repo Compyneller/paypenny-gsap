@@ -71,7 +71,7 @@ const AppSloutley = () => {
     };
   }, []);
   return (
-    <div className="w-full relative z-0 min-h-[884px] rounded-[60px] bg-[#010409] flex items-center overflow-hidden">
+    <div className="w-full relative z-0 min-h-[884px] rounded-[60px] bg-[#010409] flex items-center overflow-hidden app-solutely">
       <Container className="flex flex-col justify-center text-white">
         <div>
           <h1

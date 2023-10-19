@@ -30,7 +30,7 @@ const Hero = () => {
 
   return (
     <div
-      className="w-full min-h-[1227px] relative rounded-b-[50px] flex items-center justify-center z-0 overflow-hidden text-white "
+      className="w-full min-h-[1227px] relative rounded-b-[50px] flex items-center justify-center z-0 overflow-hidden text-white hero"
       ref={root}>
       <img
         src={bg}

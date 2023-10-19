@@ -18,7 +18,6 @@ body {
   background: red;
 }
 body {
-  cursor: url("./assets/Untitled.png"), auto;
   font-family: "Gilroy" !important;
 }
 .custom-btn {
@@ -113,4 +112,38 @@ body {
 
 .cst-linear-gradient {
   background: linear-gradient(152deg, #0054ff 22.32%, #00a3ff 97.4%);
+}
+
+.swiper-pagination-bullet {
+  background: white;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.5rem;
+  opacity: 0.5;
+}
+.swiper-pagination-bullet-active {
+  background-color: white;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.5rem;
+  opacity: 1;
+}
+
+.hero {
+  cursor: url("./assets/icons8-select-cursor-48 (1).png"), auto;
+}
+.benefits {
+  cursor: url("./assets/icons8-select-cursor-48 (1).png"), auto;
+}
+.app-solutely {
+  cursor: url("./assets/icons8-select-cursor-48 (1).png"), auto;
+}
+.send-money {
+  cursor: url("./assets/icons8-select-cursor-48.png"), auto;
+}
+.why-choose-us {
+  cursor: url("./assets/icons8-select-cursor-48.png"), auto;
+}
+.my-footer {
+  cursor: url("./assets/icons8-select-cursor-48.png"), auto;
 }
