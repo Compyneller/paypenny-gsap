@@ -4,6 +4,7 @@ import logo from "../assets/image 819.png";
 import fb from "../assets/facebook.png";
 import insta from "../assets/Group (1).png";
 import linkedin from "../assets/Group (2).png";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="pt-28 pb-20 overflow-hidden my-footer">
@@ -33,8 +34,16 @@ const Footer = () => {
                   Legal
                 </h5>
                 <div className="flex flex-col gap-[24px]">
-                  <a href="">Terms & Conditions</a>
-                  <a href="">Privacy Policy</a>
+                  <Link
+                    to="/terms-and-conditions"
+                    onClick={() => window.scroll(0, 0)}>
+                    Terms & Conditions
+                  </Link>
+                  <Link
+                    to="/privacy-policy"
+                    onClick={() => window.scroll(0, 0)}>
+                    Privacy Policy
+                  </Link>
                 </div>
               </Col>
               <Col xs={6} sm={12} md={6} lg={3}>

@@ -147,3 +147,6 @@ body {
 .my-footer {
   cursor: url("./assets/icons8-select-cursor-48.png"), auto;
 }
+.faq-bg {
+  background: linear-gradient(152deg, #0054ff 22.32%, #00a3ff 97.4%);
+}

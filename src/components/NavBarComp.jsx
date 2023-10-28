@@ -5,6 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import logo from "../assets/Logo.png";
 import gsap from "gsap";
 import { Power3 } from "gsap";
+import { Link } from "react-router-dom";
 const NavBarComp = () => {
   useEffect(() => {
     const tl = gsap.timeline({
@@ -64,7 +65,7 @@ const NavBarComp = () => {
       // }}>
     >
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand to="/" as={Link}>
           <img src={logo} className="nav-logo" alt="" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -72,17 +73,20 @@ const NavBarComp = () => {
           <Nav className="ms-auto gap-[56px]">
             <Nav.Link
               className=" h-fit  relative overflow-hidden text-white"
-              href="#home">
+              to="/"
+              as={Link}>
               <p className="text-[26px] nav-text">Home</p>
             </Nav.Link>
             <Nav.Link
               className=" h-fit overflow-hidden text-white"
-              href="#link">
+              to="/exchange"
+              as={Link}>
               <p className="text-[26px] nav-text">Exchange</p>
             </Nav.Link>
             <Nav.Link
               className=" h-fit overflow-hidden text-white"
-              href="#link">
+              to="/faq"
+              as={Link}>
               <p className="text-[26px] nav-text">FAQ</p>
             </Nav.Link>
           </Nav>

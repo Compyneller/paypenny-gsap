@@ -9,6 +9,11 @@ import Footer from "./components/Footer";
 import gsap, { Power3 } from "gsap";
 import LoadingPage from "./components/LoadingPage";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Exchange from "./pages/Exchange";
+import FAQ from "./pages/FAQ/FAQ";
+import TermsCondition from "./pages/TermsCondition";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
@@ -73,15 +78,21 @@ const App = () => {
   }, [counter]);
   return (
     <>
-      {loading ? (
+      {/* {loading ? (
         <LoadingPage />
-      ) : (
-        <div className="smooth-scroll">
-          <NavBarComp />
-          <Home />
-          <Footer />
-        </div>
-      )}
+      ) : ( */}
+      <BrowserRouter>
+        <NavBarComp />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/exchange" element={<Exchange />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/terms-and-conditions" element={<TermsCondition />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+      {/* )} */}
     </>
   );
 };
